@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Prajul Ahmad - Aspiring Software Engineer & Computer Science Student">
+    <title>Prajul Ahmad | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <img src="logo.png" alt="Prajul Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="greeting">Hello, I'm</span>
+            <h1>Prajul Ahmad</h1>
+            <p class="subtitle">Aspiring Software Engineer & Computer Science Student</p>
+            <p class="description">Passionate about building robust applications, solving algorithmic challenges, and
+                developing full-stack solutions.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <!-- decorative code block or abstract shape -->
+            <div class="code-block">
+                <pre><code class="language-bash">$ whoami
+> Prajul Ahmad
+
+$ echo $ROLE
+> Software Engineer
+
+$ cat skills.txt
+> Java, C++, Linux, Docker...
+</code></pre>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a Computer Science student (Batch 2022-2026) at Chandigarh University with a strong
+                        foundation in
+                        <strong>Java, C++, and Web Development</strong>. I enjoy turning complex problems into efficient
+                        code.
+                    </p>
+                    <p>
+                        I have hands-on experience in building network-based applications, web platforms, and exploring
+                        containerization.
+                        I thrive in collaborative environments and am always eager to learn new technologies to become a
+                        better
+                        <strong>Software Engineer</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>C / C++</li>
+                        <li>JavaScript (Basic)</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-terminal"></i> Systems</h3>
+                    <ul>
+                        <li>Linux (File Ops, Permissions)</li>
+                        <li>Process Management</li>
+                        <li>Shell Scripting</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Networking</h3>
+                    <ul>
+                        <li>TCP/IP (Basics)</li>
+                        <li>SSH</li>
+                        <li>Ping / Traceroute</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & DB</h3>
+                    <ul>
+                        <li>Docker (Basics)</li>
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-chart-line project-icon"></i>
+                        <h3>Linux System Resource Monitor</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span>C</span>
+                        <span>Linux</span>
+                        <span>ProcFS</span>
+                        <span>Shell</span>
+                    </div>
+                    <p>Engineered a command-line monitoring utility to analyze CPU, memory, and process usage similar to
+                        top/htop. Parsed system statistics from /proc filesystem for real-time tracking.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fab fa-docker project-icon"></i>
+                        <h3>Containerized Java Socket App</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                    </div>
+                    <p>Developed a client-server communication app using Java Socket Programming. Created a Dockerfile
+                        to containerize the application for consistent execution across Linux environments.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-city project-icon"></i>
+                        <h3>Smart City Solutions Platform</h3>
+                    </div>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>Linux</span>
+                    </div>
+                    <p>Developed a responsive web platform to present smart city services. Focused on accessibility,
+                        clarity, and consistent UI design. Hosted and tested on a Linux environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2026</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Engineering in CSE</h3>
+                        <p class="institution">Chandigarh University, Mohali</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2021</div>
+                    <div class="timeline-content">
+                        <h3>Intermediate (Class XII)</h3>
+                        <p class="institution">BK Public Senior Secondary School</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3>Matriculate (Class X)</h3>
+                        <p class="institution">St. Joseph’s Senior Secondary School</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my
+                    inbox is always open!</p>
+                <div class="contact-links">
+                    <a href="mailto:work.prajulahmad@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>
+                        Email Me</a>
+                    <a href="https://linkedin.com/in/prajulahmad" target="_blank" class="contact-btn"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="tel:+917017497566" class="contact-btn"><i class="fas fa-phone"></i> +91 7017497566</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Prajul Ahmad. Built with HTML, CSS, & lots of code.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

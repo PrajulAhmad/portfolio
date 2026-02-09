@@ -1,0 +1,63 @@
+                                         Prajul Ahmad
+                     +91 7017497566 | work.prajulahmad@gmail.com | linkedin.com/in/prajulahmad
+
+Summary
+Computer Science student with strong fundamentals in Java, Linux environments, and Docker containerization.
+Hands-on experience in building and testing network-based applications and deploying systems in Linux environments.
+Demonstrates a practical understanding of system fundamentals, problem-solving, and the ability to learn quickly in enter-
+prise IT environments.
+
+Projects
+  Linux System Resource Monitor | C, Linux, ProcFS, Shell                                                          2025
+     • Engineered a command-line monitoring utility to analyze CPU, memory, and process usage similar to
+
+       top/htop.
+     • Parsed system statistics from /proc filesystem for real-time resource tracking and insights.
+
+     • Implemented alert logs for high resource consumption supporting fast system diagnostics and debugging.
+
+     • Ensured compatibility and efficient execution across major Linux distributions.
+
+
+  Containerized Java Socket Application | Java, Docker (Basics), Linux                                            2025
+    • Developed a client-server communication application using Java Socket Programming for basic real-time data
+
+      exchange.
+    • Created a Dockerfile to containerize the application, ensuring consistent execution across different Linux
+
+      environments.
+    • Used Docker commands to build and run containers, reducing manual setup of JDK and application dependencies.
+
+    • Tested and executed the containerized application on Linux systems to validate portability and reliability.
+
+
+  Smart City Solutions Platform | HTML, CSS, Basic JavaScript, Linux                                        2024–2025
+    • Developed a web-based platform to present smart city services and urban information in a structured and
+
+      user-friendly manner.
+    • Built responsive layouts using HTML and CSS, focusing on accessibility, clarity, and consistent UI design.
+
+    • Used basic JavaScript for simple client-side tasks such as form input validation and UI interactions.
+
+    • Hosted and tested the application on a Linux environment, ensuring correct file structure, permissions, and
+
+      stable execution.
+
+Education
+  Bachelor of Engineering in Computer Science & Engineering                                                 2022 – 2026
+  Chandigarh University                                                                                  Mohali, Punjab
+  Intermediate (Class XII)                                                                                  2019 – 2021
+  BK Public Senior Secondary School                                                         Jahangirabad, Uttar Pradesh
+  Matriculate (Class X)                                                                                            2019
+  St. Joseph’s Senior Secondary School                                                      Jahangirabad, Uttar Pradesh
+Additional Information
+  • Programming: C, C++, Java, JavaScript (basic), SQL
+  • Systems: Linux (file operations, permissions, processes)
+  • Networking: TCP/IP (basics), SSH, ping, traceroute
+  • Tools/DB: Git, VS Code, MySQL, Docker (basics)
+  • Languages: English, Hindi, German (A1)
+  • Certifications: German Language A1, MySQL Fundamentals, Linux Commands & Shell Scripting,
+    Accenture Nordics – Software Engineering Job Simulation, Accenture UK – Developer & Technology Job
+    Simulation
+  • Interests: Problem solving, system troubleshooting, exploring Linux and tech industry trend
+

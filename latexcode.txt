@@ -1,0 +1,209 @@
+%-------------------------
+% Resume in Latex
+% Author : Prajul Ahmad
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{ragged2e}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Prajul Ahmad} \\ \vspace{1pt}
+    \small +91 7017497566 $|$ 
+    \href{mailto:work.prajulahmad@gmail.com}{work.prajulahmad@gmail.com} $|$ 
+    \href{https://www.linkedin.com/in/prajulahmad}{linkedin.com/in/prajulahmad}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{justify}
+\small Computer Science student with strong fundamentals in \textbf{Java, C++, Linux environments}, and \textbf{Docker containerization}. Hands-on experience in building and testing network-based applications and deploying systems in \textbf{Linux environments}. Demonstrates a practical understanding of system fundamentals, problem-solving, and the ability to learn quickly in \textbf{enterprise IT environments}.
+\end{justify}
+
+
+%---------- PROJECTS ----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+
+  \resumeProjectHeading{\textbf{Linux System Resource Monitor} $|$ \emph{C, Linux, ProcFS, Shell}}{2025}
+  \resumeItemListStart
+    \resumeItem{Engineered a command-line monitoring utility to analyze \textbf{CPU, memory, and process usage} similar to top/htop.}
+    \resumeItem{Parsed system statistics from \textbf{/proc filesystem} for real-time resource tracking and insights.}
+    \resumeItem{Implemented alert logs for high resource consumption supporting fast system diagnostics and debugging.}
+    \resumeItem{Ensured compatibility and efficient execution across major Linux distributions.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{Containerized Java Socket Application} $|$ \emph{Java, Docker (Basics), Linux}}{2025}
+\resumeItemListStart
+  \resumeItem{Developed a client-server communication application using \textbf{Java Socket Programming} for basic real-time data exchange.}
+  \resumeItem{Created a \textbf{Dockerfile} to containerize the application, ensuring consistent execution across different Linux environments.}
+  \resumeItem{Used Docker commands to build and run containers, reducing manual setup of JDK and application dependencies.}
+  \resumeItem{Tested and executed the containerized application on Linux systems to validate portability and reliability.}
+\resumeItemListEnd
+
+
+
+
+  \resumeProjectHeading{\textbf{Smart City Solutions Platform} $|$ \emph{HTML, CSS, Basic JavaScript, Linux}}{2024--2025}
+\resumeItemListStart
+  \resumeItem{Developed a web-based platform to present \textbf{smart city services and urban information} in a structured and user-friendly manner.}
+  \resumeItem{Built responsive layouts using \textbf{HTML and CSS}, focusing on accessibility, clarity, and consistent UI design.}
+  \resumeItem{Used \textbf{basic JavaScript} for simple client-side tasks such as form input validation and UI interactions.}
+  \resumeItem{Hosted and tested the application on a \textbf{Linux environment}, ensuring correct file structure, permissions, and stable execution.}
+\resumeItemListEnd
+
+
+
+
+
+\resumeSubHeadingListEnd
+
+
+
+%---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Bachelor of Engineering in Computer Science \& Engineering}{2022 -- 2026}
+    {Chandigarh University}{Mohali, Punjab}
+%
+  \resumeSubheading
+    {Intermediate (Class XII)}{2019 -- 2021}
+    {BK Public Senior Secondary School}{Jahangirabad, Uttar Pradesh}
+%
+  \resumeSubheading
+    {Matriculate (Class X)}{2019}
+    {St. Joseph's Senior Secondary School}{Jahangirabad, Uttar Pradesh}
+
+\resumeSubHeadingListEnd
+
+
+%
+%---------- ADDITIONAL INFORMATION ----------
+\section{Additional Information}
+\begin{itemize}[leftmargin=0.30in]
+  \item \textbf{Programming}{: Java, C, C++, JavaScript (basic), SQL}
+  \item \textbf{Systems}{: Linux (file operations, permissions, processes)}
+  \item \textbf{Networking}{: TCP/IP (basics), SSH, ping, traceroute}
+  \item \textbf{Tools/DB}{: Git, VS Code, MySQL, Docker (basics)}
+  \item \textbf{Languages}{: English, Hindi, German (A1)}
+  \item \textbf{Certifications}{: German Language A1, MySQL Fundamentals, Linux Commands \& Shell Scripting,
+        Accenture Nordics – Software Engineering Job Simulation,
+        Accenture UK – Developer \& Technology Job Simulation}
+  \item \textbf{Interests}{: Problem solving, system troubleshooting, exploring Linux and tech industry trend}
+\end{itemize}
+
+%
+
+
+
+%-------------------------------------------
+\end{document}
