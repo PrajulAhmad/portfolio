@@ -1,235 +1,900 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajul Ahmad — Backend & Systems Developer</title>
     <meta name="description"
-        content="Portfolio of Prajul Ahmad - Aspiring Software Engineer & Computer Science Student">
-    <title>Prajul Ahmad | Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
+        content="Portfolio of Prajul Ahmad. Computer Science graduate (2026) specializing in backend architectures, distributed synchronization, Linux kernel systems, and relational databases.">
+    <meta name="keywords" content="Prajul Ahmad, Software Developer, Backend Engineer, Systems Programmer, Linux, PostgreSQL, Node.js, Chandigarh University">
+    <meta name="author" content="Prajul Ahmad">
+    <link rel="canonical" href="https://prajulahmad.me">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prajulahmad.me">
+    <meta property="og:title" content="Prajul Ahmad — Backend & Systems Developer">
+    <meta property="og:description"
+        content="Building high-integrity backend systems, local-first offline applications, and low-level Linux utilities.">
+    <meta property="og:image" content="banner.jpeg">
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="#home" class="logo">
-            <img src="logo.png" alt="Prajul Logo">
-        </a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+    <!-- Background Canvas Texture -->
+    <div class="ambient-mesh" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <span class="greeting">Hello, I'm</span>
-            <h1>Prajul Ahmad</h1>
-            <p class="subtitle">Aspiring Software Engineer & Computer Science Student</p>
-            <p class="description">Passionate about building robust applications, solving algorithmic challenges, and
-                developing full-stack solutions.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+    <!-- Sticky Floating Navigation -->
+    <header class="header">
+        <nav class="nav" aria-label="Main Navigation">
+            <a href="#hero" class="nav-brand">
+                <div class="avatar-ring">
+                    <img src="logo.png" alt="Prajul Ahmad" class="nav-avatar" width="34" height="34">
+                    <span class="live-dot" title="Available for 2026 opportunities"></span>
+                </div>
+                <div class="brand-meta">
+                    <span class="name">Prajul Ahmad</span>
+                    <span class="role font-mono">Backend & Systems</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#timeline" class="nav-link">Background</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-        </div>
-        <div class="hero-visual">
-            <!-- decorative code block or abstract shape -->
-            <div class="code-block">
-                <pre><code class="language-bash">$ whoami
-> Prajul Ahmad
 
-$ echo $ROLE
-> Software Engineer
-
-$ cat skills.txt
-> Java, C++, Linux, Docker...
-</code></pre>
+            <div class="nav-right">
+                <button class="cmd-trigger font-mono" id="cmdPaletteBtn" aria-label="Open Command Console" title="Press ⌘K or /">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                    <span>Shell</span>
+                    <kbd class="kbd-key">/</kbd>
+                </button>
+                <a href="mailto:work.prajulahmad@gmail.com" class="btn btn-primary btn-sm">Hire Me</a>
+                <button class="menu-burger" id="menuBurger" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a Computer Science student (Batch 2022-2026) at Chandigarh University with a strong
-                        foundation in
-                        <strong>Java, C++, and Web Development</strong>. I enjoy turning complex problems into efficient
-                        code.
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-layout">
+                <div class="hero-intro">
+                    <div class="status-pill">
+                        <span class="pulse-indicator"></span>
+                        <span class="pill-text font-mono">CSE '26 &middot; Chandigarh University &middot; Fedora Linux</span>
+                    </div>
+
+                    <h1 class="hero-heading">
+                        Architecting <span class="gradient-headline">backend APIs</span>, offline-first sync & low-level systems.
+                    </h1>
+
+                    <p class="hero-bio">
+                        I am an early-career software engineer obsessed with what happens beneath the UI: transactional data integrity (using integer paise over floating-point math), local SQLite queues reconciling with cloud databases, and zero-daemon C utilities parsing Linux kernel <code class="code-inline">/proc</code> structures.
                     </p>
-                    <p>
-                        I have hands-on experience in building network-based applications, web platforms, and exploring
-                        containerization.
-                        I thrive in collaborative environments and am always eager to learn new technologies to become a
-                        better
-                        <strong>Software Engineer</strong>.
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <button class="btn btn-secondary copy-btn" data-copy="work.prajulahmad@gmail.com">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <span>Copy Email</span>
+                        </button>
+                        <a href="https://github.com/PrajulAhmad" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="GitHub Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/prajulahmad" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="LinkedIn Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Bento Sidecard: Telemetry & Stack -->
+                <div class="hero-bento">
+                    <div class="bento-box telemetry-card">
+                        <div class="bento-header">
+                            <div class="window-buttons">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-title font-mono">ahmad@fedora: ~ (spec)</span>
+                            <span class="badge-tag font-mono">v2026.1</span>
+                        </div>
+                        <div class="telemetry-body font-mono">
+                            <div class="spec-line">
+                                <span class="spec-k">DEVELOPER</span>
+                                <span class="spec-v">Prajul Ahmad</span>
+                            </div>
+                            <div class="spec-line">
+                                <span class="spec-k">EDUCATION</span>
+                                <span class="spec-v">B.E. Computer Science ('26)</span>
+                            </div>
+                            <div class="spec-line">
+                                <span class="spec-k">CAMPUS</span>
+                                <span class="spec-v">Chandigarh University, Mohali</span>
+                            </div>
+                            <div class="spec-line">
+                                <span class="spec-k">OS WORKBENCH</span>
+                                <span class="spec-v">Fedora Linux &middot; Wayland</span>
+                            </div>
+                            <div class="spec-line">
+                                <span class="spec-k">CORE STACK</span>
+                                <span class="spec-v">Java, C, Node.js, SQL, Python</span>
+                            </div>
+                            <div class="spec-line">
+                                <span class="spec-k">DATABASES</span>
+                                <span class="spec-v">PostgreSQL, SQLite, Supabase</span>
+                            </div>
+                            <div class="spec-line">
+                                <span class="spec-k">RESEARCH</span>
+                                <span class="spec-v">ICATFS 2026 Conference Author</span>
+                            </div>
+                            <div class="spec-line">
+                                <span class="spec-k">AVAILABILITY</span>
+                                <span class="spec-v highlight-green">● Immediate / 2026 Grad</span>
+                            </div>
+
+                            <div class="spec-terminal-prompt">
+                                <span class="prompt-sym">ahmad@fedora:~$</span>
+                                <span class="prompt-cmd">tail -n 1 engineering_rules.txt</span>
+                            </div>
+                            <div class="prompt-quote">
+                                &ldquo;Never store money in floats; never trust clients for state.&rdquo;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights Metric Strip -->
+        <section class="strip-section">
+            <div class="container">
+                <div class="metric-strip">
+                    <div class="metric-block">
+                        <span class="m-val font-mono">B.E. CSE</span>
+                        <span class="m-label">Chandigarh University &middot; 2026</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-block">
+                        <span class="m-val font-mono">7+ Projects</span>
+                        <span class="m-label">Production, Mobile &amp; Systems</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-block">
+                        <span class="m-val font-mono">1 Conference</span>
+                        <span class="m-label">ICATFS 2026 Published Paper</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-block">
+                        <span class="m-val font-mono">Fedora / C</span>
+                        <span class="m-label">Direct Kernel /proc Interfaces</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Architecture & Philosophy Bento -->
+        <section class="section" id="architecture">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="eyebrow font-mono">// ARCHITECTURAL PILLARS</span>
+                    <h2 class="section-heading">How I think about engineering and design decisions.</h2>
+                    <p class="section-lead">
+                        I believe software resilience is defined by how edge cases, offline conditions, and data boundaries are handled.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="skills" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>C / C++</li>
-                        <li>JavaScript (Basic)</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-terminal"></i> Systems</h3>
-                    <ul>
-                        <li>Linux (File Ops, Permissions)</li>
-                        <li>Process Management</li>
-                        <li>Shell Scripting</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-network-wired"></i> Networking</h3>
-                    <ul>
-                        <li>TCP/IP (Basics)</li>
-                        <li>SSH</li>
-                        <li>Ping / Traceroute</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & DB</h3>
-                    <ul>
-                        <li>Docker (Basics)</li>
-                        <li>Git</li>
-                        <li>VS Code</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="architecture-bento">
+                    <!-- Pillar 1 -->
+                    <div class="bento-box arch-card">
+                        <div class="arch-badge font-mono">01 / FINANCIAL INTEGRITY</div>
+                        <h3 class="arch-title">Integer Paise Precision</h3>
+                        <p class="arch-text">
+                            In <em>DoodhWala</em>, milk vendors track morning and evening deliveries with varying fat/SNF rates. Storing invoice totals in IEEE-754 floats introduces fractional rounding errors across months. I strictly model currency as integer paise (1 INR = 100 paise), making calculation drift mathematically impossible.
+                        </p>
+                        <div class="arch-footer font-mono">
+                            <span>Constraint: Zero financial discrepancy</span>
+                        </div>
+                    </div>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-chart-line project-icon"></i>
-                        <h3>Linux System Resource Monitor</h3>
+                    <!-- Pillar 2 -->
+                    <div class="bento-box arch-card">
+                        <div class="arch-badge font-mono">02 / LOCAL-FIRST PERSISTENCE</div>
+                        <h3 class="arch-title">Resilient Offline Synchronization</h3>
+                        <p class="arch-text">
+                            Network connectivity drops constantly on field delivery routes. Rather than failing or blocking users, mutations write directly to local embedded SQLite. Upon reconnection, an idempotency queue reconciles state against Supabase using UUID keys, soft deletes, and timestamp-based reconciliation.
+                        </p>
+                        <div class="arch-footer font-mono">
+                            <span>State Machine: Draft &rarr; Queued &rarr; Locked</span>
+                        </div>
                     </div>
-                    <div class="project-tags">
-                        <span>C</span>
-                        <span>Linux</span>
-                        <span>ProcFS</span>
-                        <span>Shell</span>
-                    </div>
-                    <p>Engineered a command-line monitoring utility to analyze CPU, memory, and process usage similar to
-                        top/htop. Parsed system statistics from /proc filesystem for real-time tracking.</p>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fab fa-docker project-icon"></i>
-                        <h3>Containerized Java Socket App</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>Docker</span>
-                        <span>Linux</span>
-                    </div>
-                    <p>Developed a client-server communication app using Java Socket Programming. Created a Dockerfile
-                        to containerize the application for consistent execution across Linux environments.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <i class="fas fa-city project-icon"></i>
-                        <h3>Smart City Solutions Platform</h3>
-                    </div>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                        <span>Linux</span>
-                    </div>
-                    <p>Developed a responsive web platform to present smart city services. Focused on accessibility,
-                        clarity, and consistent UI design. Hosted and tested on a Linux environment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="section alt-bg">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2022 - 2026</div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Engineering in CSE</h3>
-                        <p class="institution">Chandigarh University, Mohali</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2021</div>
-                    <div class="timeline-content">
-                        <h3>Intermediate (Class XII)</h3>
-                        <p class="institution">BK Public Senior Secondary School</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019</div>
-                    <div class="timeline-content">
-                        <h3>Matriculate (Class X)</h3>
-                        <p class="institution">St. Joseph’s Senior Secondary School</p>
+                    <!-- Pillar 3 -->
+                    <div class="bento-box arch-card">
+                        <div class="arch-badge font-mono">03 / LOW-LEVEL OBSERVABILITY</div>
+                        <h3 class="arch-title">Kernel /proc Direct Telemetry</h3>
+                        <p class="arch-text">
+                            When building system monitoring utilities in C, relying on bulky external monitoring agents defeats the purpose. By parsing Linux's virtual <code class="code-inline">/proc/stat</code> and <code class="code-inline">/proc/meminfo</code> directly in C, I extract per-PID CPU jiffies, memory saturation, and process trees with near-zero runtime overhead.
+                        </p>
+                        <div class="arch-footer font-mono">
+                            <span>Platform: POSIX &middot; Native Linux C</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my
-                    inbox is always open!</p>
-                <div class="contact-links">
-                    <a href="mailto:work.prajulahmad@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i>
-                        Email Me</a>
-                    <a href="https://linkedin.com/in/prajulahmad" target="_blank" class="contact-btn"><i
-                            class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="tel:+917017497566" class="contact-btn"><i class="fas fa-phone"></i> +91 7017497566</a>
+        <!-- Projects Showcase Section -->
+        <section class="section alt-bg" id="projects">
+            <div class="container">
+                <div class="section-title-wrap split-title">
+                    <div>
+                        <span class="eyebrow font-mono">// FEATURED IMPLEMENTATIONS</span>
+                        <h2 class="section-heading">Verified projects with code &amp; live deployments.</h2>
+                    </div>
+                    <!-- Filter Tabs -->
+                    <div class="filter-bar font-mono" role="tablist">
+                        <button class="filter-pill active" data-filter="all">All (7)</button>
+                        <button class="filter-pill" data-filter="backend">Backend &amp; APIs</button>
+                        <button class="filter-pill" data-filter="localfirst">Local-First</button>
+                        <button class="filter-pill" data-filter="systems">Systems &amp; AI</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: TaskFlow -->
+                    <article class="project-bento-card" data-category="backend">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <div class="p-badges font-mono">
+                                    <span class="pill pill-green">Live Production</span>
+                                    <span class="pill pill-dim">Node.js &middot; PostgreSQL</span>
+                                </div>
+                                <div class="p-links">
+                                    <a href="https://taskflow-production-2bfd.up.railway.app" target="_blank" rel="noopener noreferrer" class="link-circle" title="Open Live Railway Deployment">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h3 class="p-title">
+                                <a href="https://taskflow-production-2bfd.up.railway.app" target="_blank" rel="noopener noreferrer">TaskFlow &mdash; Role-Based Team Task Platform</a>
+                            </h3>
+
+                            <p class="p-desc">
+                                Full-stack task management application with role-based access control (Admin / Member). Features Kanban workflow columns (Todo, In Progress, Done), automated overdue task detection, and dashboard status analytics.
+                            </p>
+
+                            <div class="arch-box font-mono">
+                                <div class="arch-box-title">TECH &amp; ARCHITECTURE</div>
+                                <ul>
+                                    <li>&bull; JWT authentication with salted <code>bcrypt</code> password hashing.</li>
+                                    <li>&bull; Normalized PostgreSQL persistence modeling workspaces &amp; role ACLs.</li>
+                                    <li>&bull; Deployed on Railway cloud container infrastructure.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-tags font-mono">
+                                <span>Express.js</span>
+                                <span>PostgreSQL</span>
+                                <span>JWT</span>
+                                <span>Railway</span>
+                                <span>REST</span>
+                            </div>
+
+                            <div class="p-footer">
+                                <a href="https://taskflow-production-2bfd.up.railway.app" target="_blank" rel="noopener noreferrer" class="action-link">
+                                    <span>Launch Live App</span>
+                                    <span class="arr">&rarr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: DoodhWala -->
+                    <article class="project-bento-card" data-category="localfirst">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <div class="p-badges font-mono">
+                                    <span class="pill pill-blue">Offline-First Mobile</span>
+                                    <span class="pill pill-dim">Vue.js &middot; SQLite &middot; Supabase</span>
+                                </div>
+                                <div class="p-links">
+                                    <a href="https://github.com/PrajulAhmad/DoodhWala" target="_blank" rel="noopener noreferrer" class="link-circle" title="View Source on GitHub">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <h3 class="p-title">
+                                <a href="https://github.com/PrajulAhmad/DoodhWala" target="_blank" rel="noopener noreferrer">DoodhWala &mdash; Local-First Billing &amp; Ledger</a>
+                            </h3>
+
+                            <p class="p-desc">
+                                Specialized Android delivery and customer balance ledger application for local milk vendors. Manages daily shift deliveries (morning/evening, cow/buffalo), pauses, customer subscriptions, and automated WhatsApp invoice PDF generation.
+                            </p>
+
+                            <div class="arch-box font-mono">
+                                <div class="arch-box-title">TECH &amp; ARCHITECTURE</div>
+                                <ul>
+                                    <li>&bull; Strict integer paise financial arithmetic eliminating floating-point rounding.</li>
+                                    <li>&bull; Offline SQLite mutation sync queue reconciling with Supabase.</li>
+                                    <li>&bull; Locked invoice lifecycle ensuring tamper-proof historical statements.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-tags font-mono">
+                                <span>Capacitor</span>
+                                <span>Vue.js</span>
+                                <span>SQLite</span>
+                                <span>Supabase</span>
+                                <span>Android</span>
+                            </div>
+
+                            <div class="p-footer">
+                                <a href="https://github.com/PrajulAhmad/DoodhWala" target="_blank" rel="noopener noreferrer" class="action-link">
+                                    <span>View Source Code</span>
+                                    <span class="arr">&rarr;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Linux System Resource Monitor -->
+                    <article class="project-bento-card" data-category="systems">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <div class="p-badges font-mono">
+                                    <span class="pill pill-purple">Systems &amp; C</span>
+                                    <span class="pill pill-dim">Linux Kernel /proc</span>
+                                </div>
+                            </div>
+
+                            <h3 class="p-title">Linux System Resource Monitor</h3>
+
+                            <p class="p-desc">
+                                A high-efficiency command-line performance monitor written in pure C. Gathers CPU utilization, physical memory allocation, and active process metrics directly by decoding Linux's virtual filesystem without external daemons.
+                            </p>
+
+                            <div class="arch-box font-mono">
+                                <div class="arch-box-title">TECH &amp; ARCHITECTURE</div>
+                                <ul>
+                                    <li>&bull; Real-time parsing of <code>/proc/stat</code> (jiffies delta) and <code>/proc/meminfo</code>.</li>
+                                    <li>&bull; Iterates PID nodes to track process memory RSS, state, and thread count.</li>
+                                    <li>&bull; Configurable resource threshold triggers with diagnostic alert logging.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-tags font-mono">
+                                <span>C Language</span>
+                                <span>Linux Kernel</span>
+                                <span>POSIX</span>
+                                <span>/proc FS</span>
+                                <span>Bash</span>
+                            </div>
+
+                            <div class="p-footer">
+                                <span class="font-mono text-dim">Compiled native utility</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Automated LLM Evaluation System -->
+                    <article class="project-bento-card" data-category="systems">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <div class="p-badges font-mono">
+                                    <span class="pill pill-teal">AI Systems &amp; Eval</span>
+                                    <span class="pill pill-dim">Python &middot; AsyncIO</span>
+                                </div>
+                            </div>
+
+                            <h3 class="p-title">Automated LLM Evaluation Engine</h3>
+
+                            <p class="p-desc">
+                                CLI benchmarking harness using the LLM-as-a-Judge paradigm to evaluate open-weights and commercial models (Llama 3, Gemma, GPT-OSS) against reference gold standards across six structured evaluation criteria.
+                            </p>
+
+                            <div class="arch-box font-mono">
+                                <div class="arch-box-title">TECH &amp; ARCHITECTURE</div>
+                                <ul>
+                                    <li>&bull; Parallelized inference using Python <code>asyncio</code> and OpenRouter API.</li>
+                                    <li>&bull; Scored on accuracy, instruction following, completeness, quality, and naturalness.</li>
+                                    <li>&bull; Generates comparative matrix reports and JSON audit trails for regressions.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-tags font-mono">
+                                <span>Python 3</span>
+                                <span>asyncio</span>
+                                <span>OpenRouter</span>
+                                <span>LLM-as-a-Judge</span>
+                                <span>CLI</span>
+                            </div>
+
+                            <div class="p-footer">
+                                <span class="font-mono text-dim">Asynchronous Benchmarking Engine</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: TechFlow SaaS -->
+                    <article class="project-bento-card" data-category="backend">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <div class="p-badges font-mono">
+                                    <span class="pill pill-blue">SaaS &amp; Payments</span>
+                                    <span class="pill pill-dim">Express &middot; Razorpay</span>
+                                </div>
+                            </div>
+
+                            <h3 class="p-title">TechFlow &mdash; Enterprise SaaS Platform</h3>
+
+                            <p class="p-desc">
+                                Enterprise SaaS web platform incorporating multi-tier subscription billing with Razorpay. Features cryptographic webhook validation, client dashboard state, and database Row Level Security.
+                            </p>
+
+                            <div class="arch-box font-mono">
+                                <div class="arch-box-title">TECH &amp; ARCHITECTURE</div>
+                                <ul>
+                                    <li>&bull; Razorpay payment verification using HMAC SHA-256 webhook signatures.</li>
+                                    <li>&bull; Supabase PostgreSQL persistence guarded by Row Level Security (RLS).</li>
+                                    <li>&bull; Front-end layout animated with GSAP micro-interactions.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-tags font-mono">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>Razorpay</span>
+                                <span>HMAC SHA-256</span>
+                                <span>PostgreSQL</span>
+                            </div>
+
+                            <div class="p-footer">
+                                <span class="font-mono text-dim">Subscription Infrastructure</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Autonomous Voice & Vision Smart Bin -->
+                    <article class="project-bento-card" data-category="systems">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <div class="p-badges font-mono">
+                                    <span class="pill pill-amber">Robotics &amp; IoT</span>
+                                    <span class="pill pill-dim">ESP32 &middot; C++ Hardware</span>
+                                </div>
+                            </div>
+
+                            <h3 class="p-title">Autonomous Voice &amp; Vision Smart Bin</h3>
+
+                            <p class="p-desc">
+                                Voice-controlled and camera-equipped automated waste management rover. Built with ESP32 microcontrollers, camera vision, ultrasonic obstacle avoidance, and DC gearmotor locomotion for contactless hygienic disposal.
+                            </p>
+
+                            <div class="arch-box font-mono">
+                                <div class="arch-box-title">TECH &amp; ARCHITECTURE</div>
+                                <ul>
+                                    <li>&bull; Dual microcontroller: ESP32 DevKit V1 main control + ESP32-CAM module.</li>
+                                    <li>&bull; HC-SR04 ultrasonic obstacle avoidance &amp; SG90 servo lid opening actuator.</li>
+                                    <li>&bull; L298N dual motor driver powered by dual 18650 Li-ion battery delivery system.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-tags font-mono">
+                                <span>ESP32</span>
+                                <span>C++</span>
+                                <span>ESP32-CAM</span>
+                                <span>Robotics</span>
+                                <span>IoT</span>
+                            </div>
+
+                            <div class="p-footer">
+                                <span class="font-mono text-dim">Embedded Hardware System</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7: TCP Network Communication System -->
+                    <article class="project-bento-card" data-category="backend">
+                        <div class="card-inner">
+                            <div class="p-header">
+                                <div class="p-badges font-mono">
+                                    <span class="pill pill-purple">Networking</span>
+                                    <span class="pill pill-dim">Java &middot; Sockets</span>
+                                </div>
+                            </div>
+
+                            <h3 class="p-title">TCP Network Communication System</h3>
+
+                            <p class="p-desc">
+                                Client-server data transmission framework developed using native Java Socket programming over TCP, verified and diagnosed in Linux network topologies.
+                            </p>
+
+                            <div class="arch-box font-mono">
+                                <div class="arch-box-title">TECH &amp; ARCHITECTURE</div>
+                                <ul>
+                                    <li>&bull; Full-duplex client-server TCP packet framing and socket lifecycle handling.</li>
+                                    <li>&bull; Network reliability testing with <code>ping</code>, <code>netstat</code>, and <code>traceroute</code>.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-tags font-mono">
+                                <span>Java</span>
+                                <span>Sockets</span>
+                                <span>TCP/IP</span>
+                                <span>Linux Net</span>
+                            </div>
+
+                            <div class="p-footer">
+                                <span class="font-mono text-dim">Socket-Level Networking</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Capabilities & Skills Matrix -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="eyebrow font-mono">// SKILLS TAXONOMY</span>
+                    <h2 class="section-heading">Verified technologies and practical domain depth.</h2>
+                    <p class="section-lead">
+                        Ground truth skills used in real implementations &mdash; labeled by actual role context.
+                    </p>
+                </div>
+
+                <div class="skills-bento">
+                    <!-- Languages -->
+                    <div class="bento-box skill-card">
+                        <div class="skill-cat-head">
+                            <span class="cat-pill font-mono">LANGUAGES</span>
+                            <span class="cat-count font-mono">7 Languages</span>
+                        </div>
+                        <div class="skill-list font-mono">
+                            <div class="skill-row"><span class="k">Java</span><span class="v">Backend Services &amp; Sockets</span></div>
+                            <div class="skill-row"><span class="k">C</span><span class="v">Systems, /proc, POSIX</span></div>
+                            <div class="skill-row"><span class="k">JavaScript</span><span class="v">Node.js, Express, ES6+</span></div>
+                            <div class="skill-row"><span class="k">Python</span><span class="v">AsyncIO, LLM Evaluation</span></div>
+                            <div class="skill-row"><span class="k">C++</span><span class="v">ESP32 &amp; Embedded Systems</span></div>
+                            <div class="skill-row"><span class="k">SQL</span><span class="v">PostgreSQL, SQLite, MySQL</span></div>
+                            <div class="skill-row"><span class="k">Bash</span><span class="v">Linux Automation &amp; Scripts</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Systems -->
+                    <div class="bento-box skill-card">
+                        <div class="skill-cat-head">
+                            <span class="cat-pill font-mono">BACKEND &amp; INFRASTRUCTURE</span>
+                            <span class="cat-count font-mono">Architecture</span>
+                        </div>
+                        <div class="skill-list font-mono">
+                            <div class="skill-row"><span class="k">REST APIs</span><span class="v">Express, Route Security</span></div>
+                            <div class="skill-row"><span class="k">Auth / ACL</span><span class="v">JWT, salted bcrypt hashing</span></div>
+                            <div class="skill-row"><span class="k">Fedora Linux</span><span class="v">Daily workstation &amp; tools</span></div>
+                            <div class="skill-row"><span class="k">Docker / Podman</span><span class="v">Containerization basics</span></div>
+                            <div class="skill-row"><span class="k">Git / GitHub</span><span class="v">VCS, branching, PR flows</span></div>
+                            <div class="skill-row"><span class="k">Cloud Deploy</span><span class="v">Railway, Netlify, Render</span></div>
+                            <div class="skill-row"><span class="k">Webhooks</span><span class="v">HMAC SHA-256 verification</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Databases & Data Integrity -->
+                    <div class="bento-box skill-card">
+                        <div class="skill-cat-head">
+                            <span class="cat-pill font-mono">PERSISTENCE &amp; QUALITY</span>
+                            <span class="cat-count font-mono">Data &amp; QA</span>
+                        </div>
+                        <div class="skill-list font-mono">
+                            <div class="skill-row"><span class="k">PostgreSQL</span><span class="v">Relational schema design</span></div>
+                            <div class="skill-row"><span class="k">SQLite</span><span class="v">Embedded local-first stores</span></div>
+                            <div class="skill-row"><span class="k">Supabase</span><span class="v">RLS security &amp; cloud sync</span></div>
+                            <div class="skill-row"><span class="k">Manual QA</span><span class="v">Test suites, edge case audits</span></div>
+                            <div class="skill-row"><span class="k">Postman</span><span class="v">API endpoint testing</span></div>
+                            <div class="skill-row"><span class="k">Integer Math</span><span class="v">Paise-based ledger models</span></div>
+                            <div class="skill-row"><span class="k">LLM Scoring</span><span class="v">6-metric rubric evaluation</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Publications & Honors -->
+        <section class="section alt-bg" id="research">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="eyebrow font-mono">// ACADEMIC RESEARCH</span>
+                    <h2 class="section-heading">Peer-reviewed conference research &amp; papers.</h2>
+                </div>
+
+                <div class="research-showcase">
+                    <div class="bento-box research-feature-card">
+                        <div class="res-meta-line font-mono">
+                            <span class="pill pill-green">Published Conference Paper</span>
+                            <span class="paper-id">Paper ID: 46 / 1053 &middot; ICATFS 2026</span>
+                        </div>
+
+                        <h3 class="res-title">
+                            &ldquo;AI-Powered Smart City Management Systems&rdquo;
+                        </h3>
+
+                        <div class="res-venue font-mono">
+                            1st International Conference on Advances in Thermal and Fluid Systems (ICATFS 2026)<br>
+                            CGC University, Mohali, Punjab &middot; 2026
+                        </div>
+
+                        <p class="res-summary">
+                            Examines the convergence of simulated federated learning, distributed IoT telemetry, and real-time decision algorithms to optimize municipal energy consumption, traffic load balancing, and smart infrastructure management without centralizing sensitive localized data.
+                        </p>
+
+                        <div class="p-tags font-mono">
+                            <span>Federated Learning Simulation</span>
+                            <span>IoT Sensor Networks</span>
+                            <span>Smart City Infrastructure</span>
+                            <span>Urban Telemetry</span>
+                        </div>
+                    </div>
+
+                    <div class="bento-box research-side-card">
+                        <span class="pill pill-dim font-mono">Conference Submission</span>
+                        <h4 class="sub-title">2nd Int. Conference on Smart Technologies for Sustainable Development (ICSTSDG 2026)</h4>
+                        <p class="sub-text">
+                            Research manuscript exploring algorithmic telemetry optimization for low-power smart building sensors to minimize computational overhead during real-time event dispatching.
+                        </p>
+                        <div class="summit-callout font-mono">
+                            <span>Attended:</span> India AI Impact Summit 2026 &middot; Bharat Mandapam, New Delhi
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Background, Education & Certifications Timeline -->
+        <section class="section" id="timeline">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="eyebrow font-mono">// BACKGROUND &amp; PATHWAY</span>
+                    <h2 class="section-heading">Education, certifications &amp; industry programs.</h2>
+                </div>
+
+                <div class="timeline-grid">
+                    <!-- Formal Education -->
+                    <div class="timeline-column">
+                        <h3 class="col-title font-mono">EDUCATION</h3>
+
+                        <div class="timeline-card-stream">
+                            <div class="bento-box t-card">
+                                <span class="t-year font-mono">2022 &mdash; 2026 (Graduation Batch)</span>
+                                <h4 class="t-title">Bachelor of Engineering in CSE</h4>
+                                <div class="t-inst font-mono">Chandigarh University, Mohali, Punjab</div>
+                                <p class="t-desc">
+                                    Deep coursework in Operating Systems, Database Management Systems, Data Structures &amp; Algorithms, Computer Networks, and Object-Oriented Software Design.
+                                </p>
+                            </div>
+
+                            <div class="bento-box t-card">
+                                <span class="t-year font-mono">2019 &mdash; 2021</span>
+                                <h4 class="t-title">Intermediate (Class XII)</h4>
+                                <div class="t-inst font-mono">BK Public Senior Secondary School, U.P.</div>
+                                <p class="t-desc">Mathematics &amp; Physics foundation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications & Programs -->
+                    <div class="timeline-column">
+                        <h3 class="col-title font-mono">CERTIFICATIONS &amp; ENGAGEMENT</h3>
+
+                        <div class="certs-stream">
+                            <div class="cert-row">
+                                <span class="c-bullet"></span>
+                                <div class="c-info">
+                                    <div class="c-name">100K Agentblazer Champions Program</div>
+                                    <div class="c-org font-mono">Salesforce &middot; SmartBridge &middot; IndiaAI Mission</div>
+                                </div>
+                            </div>
+
+                            <div class="cert-row">
+                                <span class="c-bullet"></span>
+                                <div class="c-info">
+                                    <div class="c-name">Microsoft-AICTE Virtual Internship (AI on Azure)</div>
+                                    <div class="c-org font-mono">Edunet Foundation &middot; Microsoft &middot; AICTE</div>
+                                </div>
+                            </div>
+
+                            <div class="cert-row">
+                                <span class="c-bullet"></span>
+                                <div class="c-info">
+                                    <div class="c-name">ServiceNow System Administration Fundamentals</div>
+                                    <div class="c-org font-mono">ServiceNow Now Learning Platform</div>
+                                </div>
+                            </div>
+
+                            <div class="cert-row">
+                                <span class="c-bullet"></span>
+                                <div class="c-info">
+                                    <div class="c-name">Linux LFS101 &amp; IBM Shell Scripting</div>
+                                    <div class="c-org font-mono">The Linux Foundation &middot; IBM</div>
+                                </div>
+                            </div>
+
+                            <div class="cert-row">
+                                <span class="c-bullet"></span>
+                                <div class="c-info">
+                                    <div class="c-name">Goethe-Zertifikat A1 (German Language)</div>
+                                    <div class="c-org font-mono">Goethe-Institut (CEFR Certified A1)</div>
+                                </div>
+                            </div>
+
+                            <div class="cert-row">
+                                <span class="c-bullet"></span>
+                                <div class="c-info">
+                                    <div class="c-name">Software Engineering Job Simulations</div>
+                                    <div class="c-org font-mono">Forage &middot; Accenture UK &amp; Accenture Nordics</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Command Console Modal / Expandable Shell -->
+        <div class="cmd-modal-backdrop" id="cmdModalBackdrop" aria-hidden="true">
+            <div class="cmd-modal-window" role="dialog" aria-modal="true" aria-label="Terminal Shell">
+                <div class="cmd-modal-bar font-mono">
+                    <div class="term-dots">
+                        <span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span>
+                    </div>
+                    <span class="term-path">ahmad@fedora:~/portfolio</span>
+                    <button class="cmd-close" id="cmdCloseBtn" aria-label="Close Shell">&times;</button>
+                </div>
+                <div class="cmd-chips-bar font-mono">
+                    <span class="chips-hint">Run:</span>
+                    <button class="term-pill" data-run="projects">projects</button>
+                    <button class="term-pill" data-run="skills">skills</button>
+                    <button class="term-pill" data-run="about">about</button>
+                    <button class="term-pill" data-run="contact">contact</button>
+                    <button class="term-pill" data-run="clear">clear</button>
+                </div>
+                <div class="cmd-screen font-mono" id="cmdScreen">
+                    <div id="cmdLog">
+                        <div class="term-lead-text">
+                            Prajul Ahmad &mdash; Interactive Portfolio Terminal [Version 2.0]<br>
+                            Type <span class="t-hl">help</span> to view all commands, or click the chips above.<br>
+                            Press <kbd class="kbd-key">Esc</kbd> to close.
+                        </div>
+                    </div>
+                    <div class="cmd-input-line">
+                        <span class="cmd-prompt">ahmad@fedora:~$</span>
+                        <input type="text" id="cmdInput" class="cmd-input font-mono" autocomplete="off" spellcheck="false" placeholder="type command...">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 Prajul Ahmad. Built with HTML, CSS, & lots of code.</p>
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-card-master">
+                    <div class="contact-copy">
+                        <span class="eyebrow font-mono">// GET IN TOUCH</span>
+                        <h2 class="contact-head">Let's discuss backend, systems, or QA opportunities.</h2>
+                        <p class="contact-p">
+                            I am actively seeking software engineering positions for the 2026 batch. My email and phone are always open for technical interviews and opportunities.
+                        </p>
+                        <div class="contact-details-list font-mono">
+                            <div class="detail-row">
+                                <span class="d-k">LOCATION:</span>
+                                <span class="d-v">Mohali / Delhi NCR, India (IST UTC+05:30)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="d-k">WORKBENCH:</span>
+                                <span class="d-v">Fedora Linux &middot; Terminal-oriented workflow</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-action-grid">
+                        <!-- Email Card -->
+                        <div class="bento-box c-box">
+                            <div class="c-box-head font-mono">EMAIL</div>
+                            <a href="mailto:work.prajulahmad@gmail.com" class="c-box-main">work.prajulahmad@gmail.com</a>
+                            <button class="btn btn-sm btn-secondary copy-btn" data-copy="work.prajulahmad@gmail.com">Copy Address</button>
+                        </div>
+
+                        <!-- Phone Card -->
+                        <div class="bento-box c-box">
+                            <div class="c-box-head font-mono">PHONE / WHATSAPP</div>
+                            <a href="tel:+917017497566" class="c-box-main">+91 7017497566</a>
+                            <a href="https://wa.me/917017497566" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">WhatsApp</a>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="bento-box c-box">
+                            <div class="c-box-head font-mono">LINKEDIN</div>
+                            <a href="https://linkedin.com/in/prajulahmad" target="_blank" rel="noopener noreferrer" class="c-box-main">linkedin.com/in/prajulahmad</a>
+                            <a href="https://linkedin.com/in/prajulahmad" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Connect &rarr;</a>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="bento-box c-box">
+                            <div class="c-box-head font-mono">GITHUB</div>
+                            <a href="https://github.com/PrajulAhmad" target="_blank" rel="noopener noreferrer" class="c-box-main">github.com/PrajulAhmad</a>
+                            <a href="https://github.com/PrajulAhmad" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Follow &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-layout font-mono">
+            <div>
+                &copy; 2026 Prajul Ahmad &middot; Built with vanilla HTML, modern CSS &amp; Motion.
+            </div>
+            <div class="footer-links">
+                <span>Fedora Linux / Wayland</span>
+                <span>&bull;</span>
+                <a href="#hero">Back to Top &uarr;</a>
+            </div>
+        </div>
     </footer>
 
+    <!-- Toast Notification -->
+    <div class="toast font-mono" id="toastNotice" role="status" aria-live="polite">
+        <span class="toast-indicator"></span>
+        <span id="toastMsg">Copied to clipboard</span>
+    </div>
+
+    <!-- Scripts: Motion Library + Application Code -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@12/dist/motion.js"></script>
     <script src="script.js"></script>
 </body>
 
