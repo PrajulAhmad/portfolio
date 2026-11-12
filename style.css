@@ -826,6 +826,13 @@ body {
     color: var(--text-muted);
 }
 
+.p-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
 .link-circle {
     width: 32px;
     height: 32px;

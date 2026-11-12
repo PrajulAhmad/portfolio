@@ -193,13 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
         projects: () => `
 <div class="term-res">
   <strong>Featured Technical Projects:</strong><br>
-  1. <strong>TaskFlow</strong> &mdash; Node.js, Express, PostgreSQL, JWT RBAC, manual permission/edge-case QA. Live: taskflow-production-2bfd.up.railway.app<br>
+  1. <strong>TaskFlow</strong> &mdash; Node.js, Express, PostgreSQL, JWT RBAC, manual permission/edge-case QA. Live: taskflow.prajulahmad.me<br>
   2. <strong>DoodhWala</strong> &mdash; SQLite-to-Supabase sync with RLS, integer paise precision, Draft &rarr; Locked ledger invoices.<br>
   3. <strong>Linux Resource Monitor</strong> &mdash; Direct C parsing of /proc/stat &amp; /proc/meminfo without daemons.<br>
   4. <strong>Automated LLM Evaluation</strong> &mdash; Async Python (asyncio) 6-metric quality benchmarking &amp; JSON audit trails.<br>
   5. <strong>TechFlow SaaS</strong> &mdash; Express &amp; PostgreSQL RLS backend with Razorpay HMAC SHA-256 webhook verification.<br>
-  6. <strong>Smart Bin Robot</strong> &mdash; Dual ESP32 + ESP32-CAM, ultrasonic avoidance, DC motors &amp; Li-ion power.<br>
-  7. <strong>TCP Network System</strong> &mdash; Java socket client-server communication tested on Linux network interfaces.
+  6. <strong>TCP Network System</strong> &mdash; Java socket client-server communication tested on Linux network interfaces.
 </div>`,
 
         skills: () => `
