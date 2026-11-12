@@ -193,29 +193,29 @@ document.addEventListener('DOMContentLoaded', () => {
         projects: () => `
 <div class="term-res">
   <strong>Featured Technical Projects:</strong><br>
-  1. <strong>TaskFlow</strong> &mdash; Node.js, Express, PostgreSQL, JWT RBAC, Kanban. Live: taskflow-production-2bfd.up.railway.app<br>
-  2. <strong>DoodhWala</strong> &mdash; Offline-first Android app; Vue.js, SQLite, Supabase sync, integer paise billing, PDF generation.<br>
+  1. <strong>TaskFlow</strong> &mdash; Node.js, Express, PostgreSQL, JWT RBAC, manual permission/edge-case QA. Live: taskflow-production-2bfd.up.railway.app<br>
+  2. <strong>DoodhWala</strong> &mdash; SQLite-to-Supabase sync with RLS, integer paise precision, Draft &rarr; Locked ledger invoices.<br>
   3. <strong>Linux Resource Monitor</strong> &mdash; Direct C parsing of /proc/stat &amp; /proc/meminfo without daemons.<br>
-  4. <strong>Automated LLM Evaluation</strong> &mdash; Async Python (asyncio) multi-model benchmarking against gold standards.<br>
-  5. <strong>Smart Bin Robot</strong> &mdash; Dual ESP32 + ESP32-CAM, ultrasonic avoidance, DC motors &amp; Li-ion battery subsystem.<br>
-  6. <strong>TechFlow SaaS</strong> &mdash; Razorpay subscription webhook verification via HMAC SHA-256 &amp; Row Level Security.
+  4. <strong>Automated LLM Evaluation</strong> &mdash; Async Python (asyncio) 6-metric quality benchmarking &amp; JSON audit trails.<br>
+  5. <strong>TechFlow SaaS</strong> &mdash; Express &amp; PostgreSQL RLS backend with Razorpay HMAC SHA-256 webhook verification.<br>
+  6. <strong>Smart Bin Robot</strong> &mdash; Dual ESP32 + ESP32-CAM, ultrasonic avoidance, DC motors &amp; Li-ion power.<br>
+  7. <strong>TCP Network System</strong> &mdash; Java socket client-server communication tested on Linux network interfaces.
 </div>`,
 
         skills: () => `
 <div class="term-res">
   <strong>Verified Technical Capabilities:</strong><br>
+  &bull; <strong>Backend &amp; Databases:</strong> Node.js, Express, PostgreSQL, MySQL, SQLite, Supabase (RLS), JWT, bcrypt, HMAC<br>
+  &bull; <strong>QA &amp; Verification:</strong> Manual functional/regression QA, Postman API testing, edge-case &amp; RBAC audits<br>
   &bull; <strong>Languages:</strong> Java, C, C++, JavaScript (ES6+), Python, SQL, Bash<br>
-  &bull; <strong>Backend:</strong> Node.js, Express.js, REST APIs, JWT, bcrypt, Socket.io<br>
-  &bull; <strong>Databases:</strong> PostgreSQL, SQLite (Local-first), Supabase (RLS), MySQL<br>
-  &bull; <strong>Systems:</strong> Fedora Linux, /proc FS, Docker, Git, Vim, ADB<br>
-  &bull; <strong>Testing:</strong> Manual testing, Postman API testing, edge case audits
+  &bull; <strong>Systems &amp; Tools:</strong> Fedora Linux, /proc FS, Docker basics, Git, Railway, Netlify
 </div>`,
 
         about: () => `
 <div class="term-res">
   <strong>Prajul Ahmad</strong> &mdash; B.E. Computer Science &amp; Engineering ('26), Chandigarh University.<br>
-  Specializing in backend engineering, distributed synchronization, Linux kernel observability, and relational databases.<br>
-  Workbench: Fedora Linux (Wayland), Bash, terminal-oriented engineering.
+  Focused on software development with hands-on experience in backend APIs, relational database design, and QA engineering.<br>
+  Workbench: Fedora Linux (Wayland), Bash, Postman, PostgreSQL/SQLite.
 </div>`,
 
         research: () => `
@@ -241,9 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
   --------------------------------<br>
   <span style="color:#38bdf8;">OS:</span> Fedora Linux x86_64 (Wayland)<br>
   <span style="color:#38bdf8;">Shell:</span> Bash 5.2<br>
-  <span style="color:#38bdf8;">Terminal:</span> Alacritty / Pty<br>
   <span style="color:#38bdf8;">Education:</span> Chandigarh University, CSE '26<br>
-  <span style="color:#38bdf8;">Primary Focus:</span> Backend APIs, Databases, Offline Sync, Low-Level C<br>
+  <span style="color:#38bdf8;">Primary Focus:</span> Software Dev, Backend APIs, Databases (PG/MySQL) &amp; QA<br>
   <span style="color:#38bdf8;">Status:</span> <span style="color:#34d399;">● Available for 2026 Opportunities</span>
 </div>`,
 
